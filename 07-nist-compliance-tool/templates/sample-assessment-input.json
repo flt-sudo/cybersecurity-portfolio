@@ -1,0 +1,185 @@
+{
+  "assessment_metadata": {
+    "organization_name": "Pinnacle Financial Services, LLC",
+    "assessment_date": "2025-11-15",
+    "assessor_name": "Security & Compliance Team",
+    "scope": "Enterprise IT environment including corporate network, cloud workloads (AWS), SaaS applications, and remote workforce infrastructure",
+    "industry": "Financial Services",
+    "employee_count": 85,
+    "notes": "Annual NIST CSF gap assessment for fiscal year 2025. Organization operates a hybrid cloud environment with 3 physical offices and approximately 40% remote workforce."
+  },
+  "responses": {
+    "ID.AM-1": {
+      "answer": "Partial",
+      "notes": "Hardware inventory exists in a spreadsheet but is not automated. Last full reconciliation was 6 months ago. No coverage for IoT devices or personal mobile devices used for work."
+    },
+    "ID.AM-2": {
+      "answer": "Partial",
+      "notes": "Software inventory maintained for licensed commercial software only. No visibility into SaaS shadow IT. Open-source components not tracked."
+    },
+    "ID.AM-3": {
+      "answer": "No",
+      "notes": "No formal data flow diagrams exist. Network topology is partially documented but data flows between cloud and on-prem are not mapped."
+    },
+    "ID.BE-1": {
+      "answer": "Yes",
+      "notes": "Supply chain role documented as part of vendor management program. Critical vendor dependencies identified."
+    },
+    "ID.BE-2": {
+      "answer": "Partial",
+      "notes": "Financial services sector role acknowledged but formal communication to DFS regulator and sector ISAC is inconsistent."
+    },
+    "ID.GV-1": {
+      "answer": "Yes",
+      "notes": "Cybersecurity policy suite approved by CISO and Board. Policies reviewed annually. Distributed via intranet and acknowledged by all employees during onboarding."
+    },
+    "ID.GV-2": {
+      "answer": "Yes",
+      "notes": "RACI matrix in place for cybersecurity functions. Dedicated security team of 3 FTEs plus MSSP for 24/7 SOC coverage."
+    },
+    "ID.RA-1": {
+      "answer": "Partial",
+      "notes": "Quarterly vulnerability scans run via Nessus for internal network. Cloud workloads scanned monthly. No regular scanning of web applications or APIs."
+    },
+    "ID.RA-2": {
+      "answer": "Yes",
+      "notes": "Subscribed to FS-ISAC threat feeds, CISA alerts, and vendor security advisories. Threat intel reviewed weekly by security team."
+    },
+    "ID.RM-1": {
+      "answer": "Partial",
+      "notes": "Risk management framework documented but risk register is not regularly updated. Last formal risk assessment was 14 months ago."
+    },
+    "ID.SC-1": {
+      "answer": "No",
+      "notes": "No formal supply chain risk management program. Vendor security assessments performed ad-hoc for new vendors only. No continuous monitoring of existing vendor risk posture."
+    },
+    "PR.AC-1": {
+      "answer": "Yes",
+      "notes": "Active Directory for identity lifecycle. Automated provisioning/deprovisioning via HR integration. Quarterly access reviews completed."
+    },
+    "PR.AC-3": {
+      "answer": "Yes",
+      "notes": "Remote access via Cisco AnyConnect VPN with MFA (Duo). Session timeouts configured. Split tunneling disabled."
+    },
+    "PR.AC-4": {
+      "answer": "Partial",
+      "notes": "Least privilege implemented for production systems. Separation of duties enforced for financial applications. However, admin account proliferation exists in dev/test environments."
+    },
+    "PR.AT-1": {
+      "answer": "Yes",
+      "notes": "Monthly phishing simulations via KnowBe4. Annual security awareness training mandatory for all employees. Completion rate: 94% last quarter."
+    },
+    "PR.DS-1": {
+      "answer": "Partial",
+      "notes": "BitLocker deployed on all company laptops. Database encryption enabled for production databases. File server data not encrypted at rest. AWS S3 buckets use SSE-S3."
+    },
+    "PR.DS-2": {
+      "answer": "Yes",
+      "notes": "TLS 1.2+ enforced for all web traffic. Internal APIs use mutual TLS. Legacy TLS 1.0/1.1 disabled across all endpoints."
+    },
+    "PR.IP-1": {
+      "answer": "Partial",
+      "notes": "CIS Benchmark hardening applied to Windows servers. Linux hardening is ad-hoc. No formal baseline for cloud workloads or containers."
+    },
+    "PR.IP-4": {
+      "answer": "Yes",
+      "notes": "Daily incremental, weekly full backups via Veeam. Backups replicated to offsite location and AWS S3. Restoration tested semi-annually with documented results."
+    },
+    "PR.MA-1": {
+      "answer": "Partial",
+      "notes": "Maintenance windows defined for production systems. Change management process in ServiceNow. However, maintenance logging is inconsistent for network equipment."
+    },
+    "PR.PT-1": {
+      "answer": "Partial",
+      "notes": "Logs collected from Windows servers, firewalls, and VPN in Splunk SIEM. Linux server logs and cloud audit trails (CloudTrail) not yet integrated. Log review is reactive, not proactive."
+    },
+    "DE.AE-1": {
+      "answer": "No",
+      "notes": "No formal baseline of normal network operations established. Network monitoring is threshold-based only (bandwidth alerts), not behavioral."
+    },
+    "DE.AE-2": {
+      "answer": "Partial",
+      "notes": "MSSP SOC performs initial triage of alerts. However, internal team lacks formal triage procedures and threat analysis frameworks (e.g., MITRE ATT&CK mapping)."
+    },
+    "DE.AE-3": {
+      "answer": "Partial",
+      "notes": "Splunk SIEM ingests logs from multiple sources but correlation rules are basic. No integration with cloud-native security tools (GuardDuty, Security Hub)."
+    },
+    "DE.CM-1": {
+      "answer": "Yes",
+      "notes": "Palo Alto NGFW with IPS enabled at perimeter. MSSP monitors firewall alerts 24/7. Internal network segmentation monitored via switch ACL logs."
+    },
+    "DE.CM-4": {
+      "answer": "Yes",
+      "notes": "CrowdStrike Falcon EDR deployed on all endpoints (workstations and servers). Real-time detection with automated containment for high-severity threats."
+    },
+    "DE.CM-7": {
+      "answer": "Partial",
+      "notes": "NAC implemented for wired connections but not wireless. Software inventory checked via endpoint agent but no real-time blocking of unauthorized software."
+    },
+    "DE.DP-1": {
+      "answer": "Yes",
+      "notes": "SOC team roles defined in SOC charter. Tier 1 (MSSP), Tier 2 (internal analysts), Tier 3 (senior/IR lead) escalation path documented."
+    },
+    "DE.DP-4": {
+      "answer": "Partial",
+      "notes": "Critical alerts escalated to management via PagerDuty. Routine event summaries provided weekly. No formal process for communicating detection information to external parties or regulators."
+    },
+    "RS.RP-1": {
+      "answer": "Yes",
+      "notes": "Incident Response Plan documented and approved. Based on NIST SP 800-61 Rev 2. Tabletop exercise conducted 8 months ago."
+    },
+    "RS.CO-1": {
+      "answer": "Yes",
+      "notes": "IRP includes roles, escalation matrix, and communication templates. Contact list updated quarterly. War room procedures defined."
+    },
+    "RS.CO-2": {
+      "answer": "Partial",
+      "notes": "Internal reporting criteria defined. However, regulatory notification requirements (state breach laws, NYDFS) not fully mapped to IR procedures."
+    },
+    "RS.AN-1": {
+      "answer": "Yes",
+      "notes": "MSSP SOC investigates all alerts with SLA: Critical <15 min, High <1 hr. Internal team reviews escalated incidents with documented analysis."
+    },
+    "RS.AN-2": {
+      "answer": "Partial",
+      "notes": "Impact assessment performed for major incidents. However, no formal business impact analysis (BIA) framework is integrated into the IR process for rapid scoping."
+    },
+    "RS.MI-1": {
+      "answer": "Yes",
+      "notes": "Containment procedures documented: network isolation via firewall rules, endpoint quarantine via CrowdStrike, account lockout procedures. Tested during tabletop."
+    },
+    "RS.MI-2": {
+      "answer": "Yes",
+      "notes": "Eradication and remediation steps documented in IRP. Post-containment vulnerability patching and credential rotation procedures in place."
+    },
+    "RS.IM-1": {
+      "answer": "Partial",
+      "notes": "Lessons learned meetings held after major incidents. However, findings are not consistently tracked to completion and IRP updates are delayed."
+    },
+    "RC.RP-1": {
+      "answer": "Partial",
+      "notes": "Business Continuity Plan exists but DRP is outdated (last updated 18 months ago). Recovery procedures not tested for cloud workloads."
+    },
+    "RC.RP-2": {
+      "answer": "No",
+      "notes": "RTOs and RPOs defined for Tier 1 applications only. Not defined for supporting infrastructure or cloud services. No recent DR test to validate achievability."
+    },
+    "RC.IM-1": {
+      "answer": "No",
+      "notes": "Recovery plans have not been updated based on recent incidents or organizational changes. Cloud migration changes not reflected."
+    },
+    "RC.IM-2": {
+      "answer": "No",
+      "notes": "Recovery strategies not reviewed since initial creation. No process for periodic review of recovery strategies against evolving threat landscape."
+    },
+    "RC.CO-1": {
+      "answer": "Partial",
+      "notes": "Basic crisis communication templates exist. PR firm on retainer. However, customer notification procedures not tested and media response plan lacks detail."
+    },
+    "RC.CO-2": {
+      "answer": "No",
+      "notes": "No formal reputation recovery plan. Post-incident stakeholder communication is ad-hoc. No planned transparency measures or trust-rebuilding activities."
+    }
+  }
+}

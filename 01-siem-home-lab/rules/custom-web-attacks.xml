@@ -1,0 +1,309 @@
+<!--
+  Custom Wazuh Rules: Web Application Attack Detection
+  Author: SIEM Home Lab Project
+  Rule IDs: 100100 - 100112
+  MITRE ATT&CK: T1190 (Exploit Public-Facing Application)
+
+  These rules detect common web application attacks by pattern-matching
+  against Apache access log entries. They cover:
+
+    - SQL Injection (union-based, boolean-based, error-based, time-based)
+    - Cross-Site Scripting (XSS) - reflected and stored payloads
+    - Path Traversal / Local File Inclusion (LFI)
+    - Command Injection
+
+  Parent Rules Referenced:
+    31100 - Apache: Access log parsed
+    31108 - Apache: 400 Bad Request
+    31101 - Apache: Web server 403 error
+    31120 - Apache: Web server returned error code
+
+  Log Source:
+    /var/log/apache2/access.log (configured in agent ossec.conf)
+
+  Deployment:
+    Copy to /var/ossec/etc/rules/ on the Wazuh Manager and restart.
+-->
+
+<group name="custom_web_attacks,web,attack,">
+
+  <!-- ================================================================ -->
+  <!--                      SQL INJECTION RULES                         -->
+  <!-- ================================================================ -->
+
+  <!-- ==============================================
+       Rule 100100: SQL Injection - UNION-based
+       Level 10
+
+       Detects UNION SELECT injection attempts in
+       the HTTP request URI. UNION-based SQLi is
+       used to extract data from other database
+       tables by appending a secondary query.
+       ============================================== -->
+  <rule id="100100" level="10">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>UNION\s+SELECT|UNION\s+ALL\s+SELECT|union\s+select|union\s+all\s+select</url>
+    <description>Web attack: SQL injection attempt detected (UNION SELECT) in request URI</description>
+    <group>sql_injection,web_attack,pci_dss_6.5.1,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC6.1,tsc_CC6.8,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100101: SQL Injection - Boolean-based
+       Level 10
+
+       Detects boolean-based blind SQLi patterns
+       such as OR 1=1, AND 1=1, OR 'a'='a'. These
+       payloads are used to infer database structure
+       by observing differences in application
+       responses.
+       ============================================== -->
+  <rule id="100101" level="10">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>OR\s+1\s*=\s*1|AND\s+1\s*=\s*1|or\s+1\s*=\s*1|'\s*OR\s*'|'\s*or\s*'|%27\s*OR|%27\s*or</url>
+    <description>Web attack: SQL injection attempt detected (boolean-based) in request URI</description>
+    <group>sql_injection,web_attack,pci_dss_6.5.1,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100102: SQL Injection - Error-based
+       Level 10
+
+       Detects error-based SQLi techniques that
+       use database functions to extract data via
+       error messages (e.g., EXTRACTVALUE, CONCAT,
+       CONVERT, CAST).
+       ============================================== -->
+  <rule id="100102" level="10">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>EXTRACTVALUE|extractvalue|UPDATEXML|updatexml|CONCAT\s*\(|concat\s*\(|CHAR\s*\(|char\s*\(|0x[0-9a-fA-F]{6,}</url>
+    <description>Web attack: SQL injection attempt detected (error-based / encoded payload) in request URI</description>
+    <group>sql_injection,web_attack,pci_dss_6.5.1,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100103: SQL Injection - Time-based Blind
+       Level 10
+
+       Detects time-based blind SQLi using
+       SLEEP(), BENCHMARK(), WAITFOR, or pg_sleep()
+       functions. Attackers use time delays to infer
+       true/false conditions when no output is
+       visible.
+       ============================================== -->
+  <rule id="100103" level="10">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>SLEEP\s*\(|sleep\s*\(|BENCHMARK\s*\(|benchmark\s*\(|WAITFOR\s+DELAY|waitfor\s+delay|pg_sleep\s*\(</url>
+    <description>Web attack: SQL injection attempt detected (time-based blind) in request URI</description>
+    <group>sql_injection,web_attack,pci_dss_6.5.1,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100104: SQL Injection - Drop/Alter/Delete
+       Level 12 (High)
+
+       Detects destructive SQL statements in the
+       request URI. These indicate an attempt to
+       modify or destroy database objects and
+       warrant immediate investigation.
+       ============================================== -->
+  <rule id="100104" level="12">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>DROP\s+TABLE|drop\s+table|ALTER\s+TABLE|alter\s+table|DELETE\s+FROM|delete\s+from|INSERT\s+INTO|insert\s+into|TRUNCATE\s+|truncate\s+</url>
+    <description>Web attack: Destructive SQL injection attempt detected (DROP/ALTER/DELETE) - HIGH SEVERITY</description>
+    <group>sql_injection,web_attack,data_destruction,pci_dss_6.5.1,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+      <id>T1565.001</id>
+    </mitre>
+    <options>alert_by_email</options>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100105: SQL Injection - Repeated Attempts
+       Level 12 (High)
+
+       Correlates multiple SQLi attempts from the
+       same source IP, indicating automated tooling
+       such as sqlmap.
+       ============================================== -->
+  <rule id="100105" level="12" frequency="5" timeframe="60">
+    <if_matched_group>sql_injection</if_matched_group>
+    <same_source_ip />
+    <description>Web attack: Multiple SQL injection attempts from same source in 60 seconds - likely automated scanning (sqlmap)</description>
+    <group>sql_injection,web_attack,automated_attack,pci_dss_6.5.1,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+    <options>alert_by_email</options>
+  </rule>
+
+  <!-- ================================================================ -->
+  <!--                 CROSS-SITE SCRIPTING (XSS) RULES                 -->
+  <!-- ================================================================ -->
+
+  <!-- ==============================================
+       Rule 100106: XSS - Script Tag Injection
+       Level 10
+
+       Detects <script> tag injection in the
+       request URI, including URL-encoded variants
+       (%3Cscript%3E). This is the most common
+       reflected XSS payload.
+       ============================================== -->
+  <rule id="100106" level="10">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>&lt;script|%3Cscript|%3cscript|&lt;SCRIPT|%3CSCRIPT</url>
+    <description>Web attack: Cross-site scripting (XSS) attempt detected - script tag injection</description>
+    <group>xss,web_attack,pci_dss_6.5.7,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,tsc_CC6.1,</group>
+    <mitre>
+      <id>T1190</id>
+      <id>T1059.007</id>
+    </mitre>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100107: XSS - Event Handler Injection
+       Level 10
+
+       Detects JavaScript event handler injection
+       (onerror, onload, onmouseover, onfocus, etc.)
+       in the request URI. These payloads execute
+       JavaScript without requiring a <script> tag.
+       ============================================== -->
+  <rule id="100107" level="10">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>onerror\s*=|onload\s*=|onmouseover\s*=|onfocus\s*=|onclick\s*=|onchange\s*=|onsubmit\s*=</url>
+    <description>Web attack: Cross-site scripting (XSS) attempt detected - event handler injection</description>
+    <group>xss,web_attack,pci_dss_6.5.7,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+      <id>T1059.007</id>
+    </mitre>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100108: XSS - JavaScript URI Injection
+       Level 10
+
+       Detects javascript: URI scheme injection and
+       other JavaScript execution vectors such as
+       alert(), document.cookie, eval(), and
+       String.fromCharCode().
+       ============================================== -->
+  <rule id="100108" level="10">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>javascript:|javascript%3A|alert\s*\(|document\.cookie|document\.location|eval\s*\(|String\.fromCharCode|fromCharCode</url>
+    <description>Web attack: Cross-site scripting (XSS) attempt detected - JavaScript URI or function injection</description>
+    <group>xss,web_attack,pci_dss_6.5.7,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+      <id>T1059.007</id>
+    </mitre>
+  </rule>
+
+  <!-- ================================================================ -->
+  <!--                  PATH TRAVERSAL / LFI RULES                      -->
+  <!-- ================================================================ -->
+
+  <!-- ==============================================
+       Rule 100109: Path Traversal / Local File Inclusion
+       Level 10
+
+       Detects directory traversal sequences
+       (../, ..%2f, %2e%2e/) and common LFI targets
+       (/etc/passwd, /etc/shadow, /proc/self/environ)
+       in the request URI.
+       ============================================== -->
+  <rule id="100109" level="10">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>\.\./|\.\.%2f|%2e%2e/|%2e%2e%2f|/etc/passwd|/etc/shadow|/proc/self/environ|/var/log/</url>
+    <description>Web attack: Path traversal / Local File Inclusion (LFI) attempt detected</description>
+    <group>path_traversal,lfi,web_attack,pci_dss_6.5.1,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+      <id>T1083</id>
+    </mitre>
+  </rule>
+
+  <!-- ================================================================ -->
+  <!--                   COMMAND INJECTION RULES                        -->
+  <!-- ================================================================ -->
+
+  <!-- ==============================================
+       Rule 100110: OS Command Injection
+       Level 12 (High)
+
+       Detects command injection patterns in the
+       request URI, including shell metacharacters
+       (;, |, `), common commands (cat, wget, curl,
+       whoami, id, uname), and encoded variants.
+       ============================================== -->
+  <rule id="100110" level="12">
+    <if_sid>31100,31108,31120</if_sid>
+    <url>;cat\s+|;ls\s+|\|cat\s+|\|ls\s+|`cat |`ls |;wget\s+|;curl\s+|\|wget\s+|\|curl\s+|;whoami|;id\b|;uname|%3Bcat|%7Ccat|%60cat</url>
+    <description>Web attack: OS command injection attempt detected in request URI - HIGH SEVERITY</description>
+    <group>command_injection,web_attack,pci_dss_6.5.1,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+      <id>T1059.004</id>
+    </mitre>
+    <options>alert_by_email</options>
+  </rule>
+
+  <!-- ================================================================ -->
+  <!--                   CORRELATION / ESCALATION                       -->
+  <!-- ================================================================ -->
+
+  <!-- ==============================================
+       Rule 100111: Multiple Web Attacks from Same Source
+       Level 12 (High)
+
+       Correlates multiple web attack alerts from
+       the same source IP within 120 seconds.
+       Indicates sustained application-layer attack
+       or automated vulnerability scanning.
+       ============================================== -->
+  <rule id="100111" level="12" frequency="10" timeframe="120">
+    <if_matched_group>web_attack</if_matched_group>
+    <same_source_ip />
+    <description>Web attack: Sustained web application attack from same source - 10+ attack payloads in 120 seconds</description>
+    <group>web_attack,automated_attack,pci_dss_6.5,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+    <options>alert_by_email</options>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100112: Web Attack Followed by Server Error
+       Level 12 (High)
+
+       Detects HTTP 500 errors from the web server
+       following web attack attempts. A 500 error
+       after an injection attempt may indicate that
+       the payload was processed by the application,
+       suggesting a potential vulnerability.
+       ============================================== -->
+  <rule id="100112" level="12">
+    <if_sid>31120</if_sid>
+    <status>500</status>
+    <description>Web server returned HTTP 500 after potential attack payload - application may be vulnerable</description>
+    <group>web_attack,application_error,pci_dss_6.5,pci_dss_11.4,gdpr_IV_35.7.d,nist_800_53_SA.11,nist_800_53_SI.4,tsc_CC6.6,tsc_CC7.1,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>
+
+</group>

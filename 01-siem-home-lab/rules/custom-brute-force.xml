@@ -1,0 +1,130 @@
+<!--
+  Custom Wazuh Rules: SSH Brute Force Detection
+  Author: SIEM Home Lab Project
+  Rule IDs: 100001 - 100005
+  MITRE ATT&CK: T1110.001 (Brute Force: Password Guessing)
+
+  These rules detect SSH brute-force attacks with escalating severity
+  levels based on the number of failed authentication attempts within
+  a defined time window.
+
+  Severity Levels:
+    Level 5  (100001) - Single failed SSH login (informational)
+    Level 10 (100002) - 5+ failed attempts in 60 seconds (alert)
+    Level 12 (100003) - 10+ failed attempts in 60 seconds (high alert)
+    Level 14 (100004) - 20+ failed attempts in 120 seconds (critical)
+    Level 10 (100005) - Successful login after brute-force attempts
+
+  Parent Rules Referenced:
+    5710 - sshd: attempt to login using a denied user
+    5711 - sshd: authentication failed
+    5716 - sshd: authentication success
+
+  Deployment:
+    Copy to /var/ossec/etc/rules/ on the Wazuh Manager and restart.
+-->
+
+<group name="custom_ssh_brute_force,authentication_failures,">
+
+  <!-- ==============================================
+       Rule 100001: Single SSH Authentication Failure
+       Level 5 (Informational)
+
+       Triggers on any individual failed SSH login.
+       Serves as the base rule for frequency-based
+       correlation in rules 100002-100004.
+       ============================================== -->
+  <rule id="100001" level="5">
+    <if_sid>5710,5711</if_sid>
+    <description>SSH: Failed authentication attempt detected</description>
+    <group>authentication_failed,ssh,pci_dss_10.2.4,pci_dss_10.2.5,gpg13_7.1,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100002: SSH Brute Force - Alert Threshold
+       Level 10 (Alert)
+
+       Triggers when 5 or more failed SSH login
+       attempts originate from the same source IP
+       within a 60-second window. This indicates a
+       likely automated password guessing attack.
+       ============================================== -->
+  <rule id="100002" level="10" frequency="5" timeframe="60">
+    <if_matched_sid>100001</if_matched_sid>
+    <same_source_ip />
+    <description>SSH brute force: 5+ failed authentication attempts from same source in 60 seconds</description>
+    <group>authentication_failures,ssh_brute_force,pci_dss_11.4,pci_dss_10.2.4,pci_dss_10.2.5,gpg13_7.1,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_SI.4,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100003: SSH Brute Force - High Severity
+       Level 12 (High Alert)
+
+       Triggers when 10 or more failed SSH login
+       attempts originate from the same source IP
+       within 60 seconds. This indicates a sustained
+       brute-force attack and should trigger active
+       response (firewall-drop).
+       ============================================== -->
+  <rule id="100003" level="12" frequency="10" timeframe="60">
+    <if_matched_sid>100001</if_matched_sid>
+    <same_source_ip />
+    <description>SSH brute force ESCALATION: 10+ failed attempts from same source in 60 seconds - possible active attack</description>
+    <group>authentication_failures,ssh_brute_force,pci_dss_11.4,pci_dss_10.2.4,pci_dss_10.2.5,gpg13_7.1,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_SI.4,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+    <options>alert_by_email</options>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100004: SSH Brute Force - Critical
+       Level 14 (Critical)
+
+       Triggers when 20 or more failed SSH login
+       attempts originate from the same source IP
+       within 120 seconds. This represents a
+       sustained, high-volume attack requiring
+       immediate investigation.
+       ============================================== -->
+  <rule id="100004" level="14" frequency="20" timeframe="120">
+    <if_matched_sid>100001</if_matched_sid>
+    <same_source_ip />
+    <description>SSH brute force CRITICAL: 20+ failed attempts from same source in 120 seconds - sustained attack in progress</description>
+    <group>authentication_failures,ssh_brute_force,pci_dss_11.4,pci_dss_10.2.4,gpg13_7.1,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_SI.4,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+    <options>alert_by_email</options>
+  </rule>
+
+  <!-- ==============================================
+       Rule 100005: Successful Login After Brute Force
+       Level 10 (Alert)
+
+       Triggers when a successful SSH login occurs
+       from an IP address that previously generated
+       brute-force alerts. This is a critical indicator
+       of compromise -- the attacker may have guessed
+       valid credentials.
+       ============================================== -->
+  <rule id="100005" level="10">
+    <if_matched_sid>100002</if_matched_sid>
+    <if_sid>5716</if_sid>
+    <same_source_ip />
+    <description>SSH: Successful login detected from IP that previously triggered brute-force alerts - POSSIBLE COMPROMISE</description>
+    <group>authentication_success,ssh_brute_force,compromised,pci_dss_10.2.4,pci_dss_10.2.5,pci_dss_11.4,gpg13_7.1,gpg13_7.2,gdpr_IV_35.7.d,hipaa_164.312.b,nist_800_53_SI.4,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.1,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
+    <mitre>
+      <id>T1110.001</id>
+      <id>T1078</id>
+    </mitre>
+    <options>alert_by_email</options>
+  </rule>
+
+</group>

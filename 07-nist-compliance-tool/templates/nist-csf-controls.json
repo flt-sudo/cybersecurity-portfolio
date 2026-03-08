@@ -1,0 +1,468 @@
+{
+  "framework": "NIST Cybersecurity Framework (CSF) v1.1",
+  "version": "1.1",
+  "last_updated": "2024-01-15",
+  "functions": [
+    {
+      "id": "ID",
+      "name": "Identify",
+      "description": "Develop an organizational understanding to manage cybersecurity risk to systems, people, assets, data, and capabilities.",
+      "categories": [
+        {
+          "id": "ID.AM",
+          "name": "Asset Management",
+          "description": "The data, personnel, devices, systems, and facilities that enable the organization to achieve business purposes are identified and managed consistent with their relative importance to organizational objectives and the organization's risk strategy."
+        },
+        {
+          "id": "ID.BE",
+          "name": "Business Environment",
+          "description": "The organization's mission, objectives, stakeholders, and activities are understood and prioritized; this information is used to inform cybersecurity roles, responsibilities, and risk management decisions."
+        },
+        {
+          "id": "ID.GV",
+          "name": "Governance",
+          "description": "The policies, procedures, and processes to manage and monitor the organization's regulatory, legal, risk, environmental, and operational requirements are understood and inform the management of cybersecurity risk."
+        },
+        {
+          "id": "ID.RA",
+          "name": "Risk Assessment",
+          "description": "The organization understands the cybersecurity risk to organizational operations, assets, and individuals."
+        },
+        {
+          "id": "ID.RM",
+          "name": "Risk Management Strategy",
+          "description": "The organization's priorities, constraints, risk tolerances, and assumptions are established and used to support operational risk decisions."
+        },
+        {
+          "id": "ID.SC",
+          "name": "Supply Chain Risk Management",
+          "description": "The organization's priorities, constraints, risk tolerances, and assumptions are established and used to support risk decisions associated with managing supply chain risk."
+        }
+      ],
+      "controls": [
+        {
+          "id": "ID.AM-1",
+          "category": "ID.AM",
+          "description": "Physical devices and systems within the organization are inventoried.",
+          "question": "Does the organization maintain a current inventory of all physical devices and systems (servers, workstations, mobile devices, IoT, network equipment)?",
+          "weight": 1.0
+        },
+        {
+          "id": "ID.AM-2",
+          "category": "ID.AM",
+          "description": "Software platforms and applications within the organization are inventoried.",
+          "question": "Does the organization maintain a current inventory of all software platforms and applications deployed across the environment?",
+          "weight": 1.0
+        },
+        {
+          "id": "ID.AM-3",
+          "category": "ID.AM",
+          "description": "Organizational communication and data flows are mapped.",
+          "question": "Are organizational communication and data flows (internal and external) documented and mapped?",
+          "weight": 0.8
+        },
+        {
+          "id": "ID.BE-1",
+          "category": "ID.BE",
+          "description": "The organization's role in the supply chain is identified and communicated.",
+          "question": "Has the organization identified and documented its role in the supply chain, including dependencies and critical functions?",
+          "weight": 0.7
+        },
+        {
+          "id": "ID.BE-2",
+          "category": "ID.BE",
+          "description": "The organization's place in critical infrastructure and its industry sector is identified and communicated.",
+          "question": "Has the organization identified its role in critical infrastructure and communicated this to relevant stakeholders?",
+          "weight": 0.6
+        },
+        {
+          "id": "ID.GV-1",
+          "category": "ID.GV",
+          "description": "Organizational cybersecurity policy is established and communicated.",
+          "question": "Does the organization have a formal cybersecurity policy that is documented, approved by leadership, and communicated to all employees?",
+          "weight": 1.0
+        },
+        {
+          "id": "ID.GV-2",
+          "category": "ID.GV",
+          "description": "Cybersecurity roles and responsibilities are coordinated and aligned with internal roles and external partners.",
+          "question": "Are cybersecurity roles and responsibilities clearly defined, assigned to specific personnel, and coordinated with external partners?",
+          "weight": 0.9
+        },
+        {
+          "id": "ID.RA-1",
+          "category": "ID.RA",
+          "description": "Asset vulnerabilities are identified and documented.",
+          "question": "Does the organization regularly identify, document, and track asset vulnerabilities using scanning tools and threat intelligence?",
+          "weight": 1.0
+        },
+        {
+          "id": "ID.RA-2",
+          "category": "ID.RA",
+          "description": "Cyber threat intelligence is received from information sharing forums and sources.",
+          "question": "Does the organization receive and consume cyber threat intelligence from ISACs, CISA, vendor advisories, or other threat intelligence sources?",
+          "weight": 0.8
+        },
+        {
+          "id": "ID.RM-1",
+          "category": "ID.RM",
+          "description": "Risk management processes are established, managed, and agreed to by organizational stakeholders.",
+          "question": "Are formal risk management processes established, documented, and agreed upon by key organizational stakeholders including executive leadership?",
+          "weight": 0.9
+        },
+        {
+          "id": "ID.SC-1",
+          "category": "ID.SC",
+          "description": "Cyber supply chain risk management processes are identified, established, assessed, managed, and agreed to by organizational stakeholders.",
+          "question": "Does the organization have formal supply chain risk management processes that assess and manage cybersecurity risks from third-party suppliers and partners?",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "id": "PR",
+      "name": "Protect",
+      "description": "Develop and implement appropriate safeguards to ensure delivery of critical infrastructure services.",
+      "categories": [
+        {
+          "id": "PR.AC",
+          "name": "Identity Management, Authentication, and Access Control",
+          "description": "Access to physical and logical assets and associated facilities is limited to authorized users, processes, and devices, and is managed consistent with the assessed risk of unauthorized access."
+        },
+        {
+          "id": "PR.AT",
+          "name": "Awareness and Training",
+          "description": "The organization's personnel and partners are provided cybersecurity awareness education and are trained to perform their cybersecurity-related duties and responsibilities."
+        },
+        {
+          "id": "PR.DS",
+          "name": "Data Security",
+          "description": "Information and records (data) are managed consistent with the organization's risk strategy to protect the confidentiality, integrity, and availability of information."
+        },
+        {
+          "id": "PR.IP",
+          "name": "Information Protection Processes and Procedures",
+          "description": "Security policies, processes, and procedures are maintained and used to manage protection of information systems and assets."
+        },
+        {
+          "id": "PR.MA",
+          "name": "Maintenance",
+          "description": "Maintenance and repairs of industrial control and information system components are performed consistent with policies and procedures."
+        },
+        {
+          "id": "PR.PT",
+          "name": "Protective Technology",
+          "description": "Technical security solutions are managed to ensure the security and resilience of systems and assets, consistent with related policies, procedures, and agreements."
+        }
+      ],
+      "controls": [
+        {
+          "id": "PR.AC-1",
+          "category": "PR.AC",
+          "description": "Identities and credentials are issued, managed, verified, revoked, and audited for authorized devices, users, and processes.",
+          "question": "Does the organization manage identities and credentials through a formal lifecycle process including provisioning, review, revocation, and auditing?",
+          "weight": 1.0
+        },
+        {
+          "id": "PR.AC-3",
+          "category": "PR.AC",
+          "description": "Remote access is managed.",
+          "question": "Is remote access managed through VPN, MFA, and monitored session controls with defined policies governing who can access what remotely?",
+          "weight": 1.0
+        },
+        {
+          "id": "PR.AC-4",
+          "category": "PR.AC",
+          "description": "Access permissions and authorizations are managed, incorporating the principles of least privilege and separation of duties.",
+          "question": "Are access permissions managed using the principle of least privilege and separation of duties, with periodic access reviews?",
+          "weight": 1.0
+        },
+        {
+          "id": "PR.AT-1",
+          "category": "PR.AT",
+          "description": "All users are informed and trained.",
+          "question": "Do all users receive regular cybersecurity awareness training covering phishing, social engineering, password hygiene, and acceptable use policies?",
+          "weight": 0.9
+        },
+        {
+          "id": "PR.DS-1",
+          "category": "PR.DS",
+          "description": "Data-at-rest is protected.",
+          "question": "Is data-at-rest protected using encryption (e.g., AES-256, BitLocker, LUKS) on endpoints, servers, databases, and removable media?",
+          "weight": 1.0
+        },
+        {
+          "id": "PR.DS-2",
+          "category": "PR.DS",
+          "description": "Data-in-transit is protected.",
+          "question": "Is data-in-transit protected using TLS 1.2+, VPN tunnels, or equivalent encryption for all internal and external communications?",
+          "weight": 1.0
+        },
+        {
+          "id": "PR.IP-1",
+          "category": "PR.IP",
+          "description": "A baseline configuration of information technology/industrial control systems is created and maintained incorporating security principles.",
+          "question": "Are baseline security configurations (hardening standards) established, documented, and maintained for all IT systems and platforms?",
+          "weight": 0.9
+        },
+        {
+          "id": "PR.IP-4",
+          "category": "PR.IP",
+          "description": "Backups of information are conducted, maintained, and tested.",
+          "question": "Are regular backups performed following the 3-2-1 rule, with backup integrity verified and restoration procedures tested at least annually?",
+          "weight": 1.0
+        },
+        {
+          "id": "PR.MA-1",
+          "category": "PR.MA",
+          "description": "Maintenance and repair of organizational assets are performed and logged in a timely manner, with approved and controlled tools.",
+          "question": "Is maintenance and repair of IT assets performed in a timely manner with approved tools, and are all maintenance activities logged?",
+          "weight": 0.7
+        },
+        {
+          "id": "PR.PT-1",
+          "category": "PR.PT",
+          "description": "Audit/log records are determined, documented, implemented, and reviewed in accordance with policy.",
+          "question": "Are audit and log records collected from critical systems, centralized in a SIEM or log management platform, and reviewed regularly?",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "id": "DE",
+      "name": "Detect",
+      "description": "Develop and implement appropriate activities to identify the occurrence of a cybersecurity event.",
+      "categories": [
+        {
+          "id": "DE.AE",
+          "name": "Anomalies and Events",
+          "description": "Anomalous activity is detected and the potential impact of events is understood."
+        },
+        {
+          "id": "DE.CM",
+          "name": "Security Continuous Monitoring",
+          "description": "The information system and assets are monitored to identify cybersecurity events and verify the effectiveness of protective measures."
+        },
+        {
+          "id": "DE.DP",
+          "name": "Detection Processes",
+          "description": "Detection processes and procedures are maintained and tested to ensure awareness of anomalous events."
+        }
+      ],
+      "controls": [
+        {
+          "id": "DE.AE-1",
+          "category": "DE.AE",
+          "description": "A baseline of network operations and expected data flows for users and systems is established and managed.",
+          "question": "Has the organization established and documented a baseline of normal network operations and expected data flows to enable anomaly detection?",
+          "weight": 0.9
+        },
+        {
+          "id": "DE.AE-2",
+          "category": "DE.AE",
+          "description": "Detected events are analyzed to understand attack targets and methods.",
+          "question": "Are detected security events analyzed to determine attack targets, methods, and potential impact using structured triage processes?",
+          "weight": 1.0
+        },
+        {
+          "id": "DE.AE-3",
+          "category": "DE.AE",
+          "description": "Event data are collected and correlated from multiple sources and sensors.",
+          "question": "Is event data collected and correlated from multiple sources (firewalls, IDS/IPS, endpoints, servers, cloud) using a SIEM or similar platform?",
+          "weight": 1.0
+        },
+        {
+          "id": "DE.CM-1",
+          "category": "DE.CM",
+          "description": "The network is monitored to detect potential cybersecurity events.",
+          "question": "Is continuous network monitoring implemented using IDS/IPS, NetFlow analysis, or NDR solutions to detect potential cybersecurity events?",
+          "weight": 1.0
+        },
+        {
+          "id": "DE.CM-4",
+          "category": "DE.CM",
+          "description": "Malicious code is detected.",
+          "question": "Are anti-malware, EDR, or XDR solutions deployed across all endpoints and servers with real-time detection and automated response capabilities?",
+          "weight": 1.0
+        },
+        {
+          "id": "DE.CM-7",
+          "category": "DE.CM",
+          "description": "Monitoring for unauthorized personnel, connections, devices, and software is performed.",
+          "question": "Does the organization monitor for unauthorized personnel, rogue devices, unauthorized connections, and unapproved software installations?",
+          "weight": 0.9
+        },
+        {
+          "id": "DE.DP-1",
+          "category": "DE.DP",
+          "description": "Roles and responsibilities for detection are well defined to ensure accountability.",
+          "question": "Are roles and responsibilities for security monitoring and detection clearly defined, with accountability assigned to specific teams (e.g., SOC)?",
+          "weight": 0.8
+        },
+        {
+          "id": "DE.DP-4",
+          "category": "DE.DP",
+          "description": "Event detection information is communicated.",
+          "question": "Is event detection information communicated to appropriate stakeholders, including security teams, management, and external parties as required?",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "id": "RS",
+      "name": "Respond",
+      "description": "Develop and implement appropriate activities to take action regarding a detected cybersecurity incident.",
+      "categories": [
+        {
+          "id": "RS.RP",
+          "name": "Response Planning",
+          "description": "Response processes and procedures are executed and maintained, to ensure response to detected cybersecurity incidents."
+        },
+        {
+          "id": "RS.CO",
+          "name": "Communications",
+          "description": "Response activities are coordinated with internal and external stakeholders."
+        },
+        {
+          "id": "RS.AN",
+          "name": "Analysis",
+          "description": "Analysis is conducted to ensure effective response and support recovery activities."
+        },
+        {
+          "id": "RS.MI",
+          "name": "Mitigation",
+          "description": "Activities are performed to prevent expansion of an event, mitigate its effects, and resolve the incident."
+        },
+        {
+          "id": "RS.IM",
+          "name": "Improvements",
+          "description": "Organizational response activities are improved by incorporating lessons learned from current and previous detection/response activities."
+        }
+      ],
+      "controls": [
+        {
+          "id": "RS.RP-1",
+          "category": "RS.RP",
+          "description": "Response plan is executed during or after an incident.",
+          "question": "Does the organization have a formal incident response plan (IRP) that is executed during or after a detected cybersecurity incident?",
+          "weight": 1.0
+        },
+        {
+          "id": "RS.CO-1",
+          "category": "RS.CO",
+          "description": "Personnel know their roles and order of operations when a response is needed.",
+          "question": "Do personnel know their specific roles, responsibilities, and order of operations during incident response, with an updated contact/escalation list?",
+          "weight": 0.9
+        },
+        {
+          "id": "RS.CO-2",
+          "category": "RS.CO",
+          "description": "Incidents are reported consistent with established criteria.",
+          "question": "Are incidents reported according to established criteria, including regulatory notification requirements (e.g., breach notification laws, CISA reporting)?",
+          "weight": 0.9
+        },
+        {
+          "id": "RS.AN-1",
+          "category": "RS.AN",
+          "description": "Notifications from detection systems are investigated.",
+          "question": "Are notifications and alerts from detection systems (SIEM, EDR, IDS) investigated by qualified analysts with documented triage procedures?",
+          "weight": 1.0
+        },
+        {
+          "id": "RS.AN-2",
+          "category": "RS.AN",
+          "description": "The impact of the incident is understood.",
+          "question": "During incident response, is the full impact of the incident assessed including affected systems, data exposure scope, and business impact?",
+          "weight": 0.9
+        },
+        {
+          "id": "RS.MI-1",
+          "category": "RS.MI",
+          "description": "Incidents are contained.",
+          "question": "Are containment procedures defined and executed to prevent incident expansion (e.g., network isolation, account disabling, endpoint quarantine)?",
+          "weight": 1.0
+        },
+        {
+          "id": "RS.MI-2",
+          "category": "RS.MI",
+          "description": "Incidents are mitigated.",
+          "question": "Are mitigation actions taken to reduce the impact of incidents, including eradication of threats and remediation of exploited vulnerabilities?",
+          "weight": 1.0
+        },
+        {
+          "id": "RS.IM-1",
+          "category": "RS.IM",
+          "description": "Response plans incorporate lessons learned.",
+          "question": "Are post-incident reviews (lessons learned) conducted after significant incidents, and are findings incorporated into updated response plans?",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "id": "RC",
+      "name": "Recover",
+      "description": "Develop and implement appropriate activities to maintain plans for resilience and to restore any capabilities or services that were impaired due to a cybersecurity incident.",
+      "categories": [
+        {
+          "id": "RC.RP",
+          "name": "Recovery Planning",
+          "description": "Recovery processes and procedures are executed and maintained to ensure restoration of systems or assets affected by cybersecurity incidents."
+        },
+        {
+          "id": "RC.IM",
+          "name": "Improvements",
+          "description": "Recovery planning and processes are improved by incorporating lessons learned into future activities."
+        },
+        {
+          "id": "RC.CO",
+          "name": "Communications",
+          "description": "Restoration activities are coordinated with internal and external parties."
+        }
+      ],
+      "controls": [
+        {
+          "id": "RC.RP-1",
+          "category": "RC.RP",
+          "description": "Recovery plan is executed during or after a cybersecurity incident.",
+          "question": "Does the organization have a formal recovery plan (BCP/DRP) that is executed during or after a cybersecurity incident to restore normal operations?",
+          "weight": 1.0
+        },
+        {
+          "id": "RC.RP-2",
+          "category": "RC.RP",
+          "description": "Recovery strategies and plans are updated based on lessons learned.",
+          "question": "Are recovery time objectives (RTO) and recovery point objectives (RPO) defined for critical systems, and are they tested and achievable?",
+          "weight": 0.9
+        },
+        {
+          "id": "RC.IM-1",
+          "category": "RC.IM",
+          "description": "Recovery plans incorporate lessons learned.",
+          "question": "Are recovery plans updated based on lessons learned from incidents, exercises, and changes in the business environment?",
+          "weight": 0.8
+        },
+        {
+          "id": "RC.IM-2",
+          "category": "RC.IM",
+          "description": "Recovery strategies are updated.",
+          "question": "Are recovery strategies periodically reviewed and updated to reflect new threats, technology changes, and organizational changes?",
+          "weight": 0.7
+        },
+        {
+          "id": "RC.CO-1",
+          "category": "RC.CO",
+          "description": "Public relations are managed.",
+          "question": "Does the organization have a crisis communications plan that manages public relations, customer notification, and media inquiries during and after incidents?",
+          "weight": 0.7
+        },
+        {
+          "id": "RC.CO-2",
+          "category": "RC.CO",
+          "description": "Reputation is repaired after an incident.",
+          "question": "Are reputation recovery activities planned and executed after incidents, including stakeholder communication and transparency measures?",
+          "weight": 0.6
+        }
+      ]
+    }
+  ]
+}

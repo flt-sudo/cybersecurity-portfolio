@@ -1,0 +1,41 @@
+Mar  5 06:22:01 web-srv-01 sshd[11201]: Accepted publickey for admin from 10.0.1.50 port 52341 ssh2
+Mar  5 06:22:03 web-srv-01 sudo:    admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+Mar  5 07:14:22 web-srv-01 sshd[11302]: Failed password for invalid user test from 203.0.113.45 port 39812 ssh2
+Mar  5 07:14:24 web-srv-01 sshd[11302]: Failed password for invalid user admin from 203.0.113.45 port 39814 ssh2
+Mar  5 07:14:26 web-srv-01 sshd[11302]: Failed password for invalid user root from 203.0.113.45 port 39816 ssh2
+Mar  5 07:14:28 web-srv-01 sshd[11302]: Failed password for invalid user guest from 203.0.113.45 port 39820 ssh2
+Mar  5 07:14:30 web-srv-01 sshd[11302]: Failed password for invalid user oracle from 203.0.113.45 port 39822 ssh2
+Mar  5 07:14:32 web-srv-01 sshd[11302]: Failed password for invalid user postgres from 203.0.113.45 port 39826 ssh2
+Mar  5 07:14:34 web-srv-01 sshd[11302]: Failed password for invalid user deploy from 203.0.113.45 port 39830 ssh2
+Mar  5 07:14:36 web-srv-01 sshd[11302]: Failed password for invalid user ubuntu from 203.0.113.45 port 39832 ssh2
+Mar  5 08:31:05 web-srv-01 sshd[11450]: Accepted password for developer from 192.168.1.100 port 44210 ssh2
+Mar  5 08:32:11 web-srv-01 sudo:    developer : TTY=pts/1 ; PWD=/home/developer ; USER=root ; COMMAND=/usr/bin/apt update
+Mar  5 08:33:45 web-srv-01 sudo:    developer : TTY=pts/1 ; PWD=/home/developer ; USER=root ; COMMAND=/usr/bin/apt install -y nginx
+Mar  5 09:00:12 web-srv-01 sshd[11512]: Failed password for root from 198.51.100.22 port 51002 ssh2
+Mar  5 09:00:15 web-srv-01 sshd[11512]: Failed password for root from 198.51.100.22 port 51004 ssh2
+Mar  5 09:00:18 web-srv-01 sshd[11512]: Failed password for root from 198.51.100.22 port 51006 ssh2
+Mar  5 09:00:20 web-srv-01 sshd[11512]: Failed password for root from 198.51.100.22 port 51008 ssh2
+Mar  5 09:00:23 web-srv-01 sshd[11512]: Failed password for root from 198.51.100.22 port 51010 ssh2
+Mar  5 09:00:26 web-srv-01 sshd[11512]: Failed password for root from 198.51.100.22 port 51012 ssh2
+Mar  5 10:15:33 web-srv-01 sshd[11678]: Accepted publickey for admin from 10.0.1.50 port 52890 ssh2
+Mar  5 10:16:01 web-srv-01 sudo:    admin : TTY=pts/2 ; PWD=/var/log ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
+Mar  5 11:42:10 web-srv-01 sshd[11801]: Failed password for admin from 45.33.32.156 port 60122 ssh2
+Mar  5 11:42:14 web-srv-01 sshd[11801]: Failed password for admin from 45.33.32.156 port 60124 ssh2
+Mar  5 11:42:18 web-srv-01 sshd[11801]: Failed password for admin from 45.33.32.156 port 60128 ssh2
+Mar  5 12:05:00 web-srv-01 sshd[11899]: Accepted password for backup_svc from 10.0.2.25 port 33410 ssh2
+Mar  5 12:05:05 web-srv-01 sudo:    backup_svc : TTY=pts/3 ; PWD=/home/backup_svc ; USER=root ; COMMAND=/usr/bin/rsync -avz /var/www /backup/www
+Mar  5 13:22:44 web-srv-01 sshd[12010]: Failed password for invalid user nagios from 203.0.113.45 port 41200 ssh2
+Mar  5 13:22:46 web-srv-01 sshd[12010]: Failed password for invalid user zabbix from 203.0.113.45 port 41204 ssh2
+Mar  5 13:22:48 web-srv-01 sshd[12010]: Failed password for invalid user ansible from 203.0.113.45 port 41208 ssh2
+Mar  5 14:00:01 web-srv-01 sshd[12100]: Accepted publickey for admin from 10.0.1.50 port 53100 ssh2
+Mar  5 14:01:10 web-srv-01 sudo:    admin : TTY=pts/4 ; PWD=/etc/nginx ; USER=root ; COMMAND=/usr/bin/vim /etc/nginx/nginx.conf
+Mar  5 14:02:30 web-srv-01 sudo:    admin : TTY=pts/4 ; PWD=/etc/nginx ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Mar  5 15:30:00 web-srv-01 sshd[12250]: Accepted password for developer from 85.203.44.7 port 48900 ssh2
+Mar  5 15:31:22 web-srv-01 sudo:    developer : TTY=pts/5 ; PWD=/home/developer ; USER=root ; COMMAND=/usr/bin/chmod 777 /var/www/html/uploads
+Mar  5 16:45:11 web-srv-01 sshd[12400]: Failed password for root from 192.0.2.100 port 55432 ssh2
+Mar  5 16:45:14 web-srv-01 sshd[12400]: Failed password for root from 192.0.2.100 port 55434 ssh2
+Mar  5 16:45:18 web-srv-01 sshd[12400]: Failed password for root from 192.0.2.100 port 55436 ssh2
+Mar  5 16:45:22 web-srv-01 sshd[12400]: Failed password for root from 192.0.2.100 port 55438 ssh2
+Mar  5 17:00:44 web-srv-01 sshd[12500]: Accepted publickey for admin from 10.0.1.50 port 53500 ssh2
+Mar  5 17:01:30 web-srv-01 sudo:    admin : TTY=pts/6 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/useradd -m temp_contractor
+Mar  5 17:02:15 web-srv-01 sudo:    admin : TTY=pts/6 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/passwd temp_contractor

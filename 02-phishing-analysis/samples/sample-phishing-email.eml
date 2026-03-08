@@ -1,0 +1,140 @@
+Received: from mail-gateway.bigcorp.example.com (mail-gateway.bigcorp.example.com [203.0.113.50])
+	by mx01.targetcompany.example.com (Postfix) with ESMTPS id 9A3F27C012
+	for <j.smith@targetcompany.example.com>;
+	Mon, 17 Feb 2026 09:14:22 -0500 (EST)
+Received: from smtp-out.suspicioushost.example.net (unknown [198.51.100.77])
+	by mail-gateway.bigcorp.example.com (Postfix) with ESMTP id 4B2C18E003
+	for <j.smith@targetcompany.example.com>;
+	Mon, 17 Feb 2026 09:14:19 -0500 (EST)
+Received: from localhost (win-PC2847 [192.168.1.105])
+	by smtp-out.suspicioushost.example.net (Sendmail) with SMTP id AAB3372
+	for <j.smith@targetcompany.example.com>;
+	Mon, 17 Feb 2026 14:14:16 +0000 (UTC)
+Authentication-Results: mx01.targetcompany.example.com;
+	spf=fail (sender IP 198.51.100.77 not permitted by domain of it-helpdesk@bigcorp.example.com) smtp.mailfrom=bounce-7721@suspicioushost.example.net;
+	dkim=fail (signature verification failed) header.d=bigcorp.example.com;
+	dmarc=fail (p=reject dis=none) header.from=bigcorp.example.com
+From: "BigCorp IT Helpdesk" <it-helpdesk@bigcorp.example.com>
+To: j.smith@targetcompany.example.com
+Subject: [URGENT] Your mailbox storage is 98% full - Immediate action required
+Date: Mon, 17 Feb 2026 14:14:11 +0000
+Message-ID: <5f2a91c3.d4e8@suspicioushost.example.net>
+Return-Path: <bounce-7721@suspicioushost.example.net>
+Reply-To: bigcorp-support_99@freemail.example.org
+X-Mailer: PHPMailer 5.2.27
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_Part_8837_1920534112.1739798051"
+
+------=_Part_8837_1920534112.1739798051
+Content-Type: multipart/alternative;
+	boundary="----=_Part_8838_472910556.1739798051"
+
+------=_Part_8838_472910556.1739798051
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+BIGCORP IT HELPDESK - AUTOMATED NOTIFICATION
+=============================================
+
+Dear Valued Employee,
+
+Our monitoring systems have detected that your corporate mailbox has reached 98% of its allocated storage quota (4.9 GB / 5.0 GB). If your mailbox exceeds 100%, you will NO LONGER be able to send or receive email.
+
+To avoid disruption, you must verify and expand your mailbox storage within the next 24 hours by completing the following steps:
+
+1. Click the link below to access the Mailbox Management Portal:
+
+   https://bigcorp-mailportal.suspicioushost.example.net/auth/verify?token=aGVsbG93b3JsZA&uid=j.smith&ref=storage-upgrade
+
+2. Sign in with your corporate credentials (email address and password).
+
+3. Select "Upgrade Storage" and confirm your identity.
+
+If you do not complete these steps by February 18, 2026, your account will be temporarily suspended per company policy (ref: IT-POL-2024-0093).
+
+For questions, contact the IT Helpdesk at it-helpdesk@bigcorp.example.com or call +1-555-012-3456.
+
+This is an automated message. Please do not reply directly.
+
+Best regards,
+David Chen
+Senior Systems Administrator
+BigCorp IT Helpdesk
+
+------=_Part_8838_472910556.1739798051
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body style="font-family:Calibri,Arial,sans-serif;color:#333;margin:20px;">
+<table width="600" cellpadding="0" cellspacing="0" style="border:1px solid #004080;">
+<tr><td style="background:#004080;color:#fff;padding:14px 20px;font-size:18px;">
+  BigCorp IT Helpdesk &mdash; Automated Notification
+</td></tr>
+<tr><td style="padding:20px;">
+
+<p>Dear Valued Employee,</p>
+
+<p>Our monitoring systems have detected that your corporate mailbox has reached
+<strong>98%</strong> of its allocated storage quota
+(<strong>4.9&nbsp;GB / 5.0&nbsp;GB</strong>). If your mailbox exceeds 100%,
+you will <span style="color:red;font-weight:bold;">NO LONGER</span> be able
+to send or receive email.</p>
+
+<p>To avoid disruption, <strong>you must verify and expand your mailbox storage
+within the next 24 hours</strong>:</p>
+
+<p style="text-align:center;margin:24px 0;">
+<a href="https://bigcorp-mailportal.suspicioushost.example.net/auth/verify?token=aGVsbG93b3JsZA&uid=j.smith&ref=storage-upgrade"
+   style="background:#004080;color:#fff;padding:12px 32px;text-decoration:none;
+          border-radius:4px;font-size:16px;">
+   Verify &amp; Upgrade Mailbox
+</a></p>
+
+<p style="font-size:13px;color:#666;">
+Direct link:
+<a href="https://bigcorp-mailportal.suspicioushost.example.net/auth/verify?token=aGVsbG93b3JsZA&uid=j.smith&ref=storage-upgrade">
+https://bigcorp-mailportal.suspicioushost.example.net/auth/verify?token=aGVsbG93b3JsZA&amp;uid=j.smith&amp;ref=storage-upgrade</a></p>
+
+<p>If you do not complete these steps by <strong>February 18, 2026</strong>,
+your account will be <strong style="color:red;">temporarily suspended</strong>
+per company policy (ref:&nbsp;IT-POL-2024-0093).</p>
+
+<p style="font-size:13px;color:#999;border-top:1px solid #ddd;padding-top:12px;margin-top:20px;">
+For questions, contact the IT Helpdesk at
+<a href="mailto:it-helpdesk@bigcorp.example.com">it-helpdesk@bigcorp.example.com</a>
+or call +1-555-012-3456.<br>
+This is an automated message. Please do not reply directly.</p>
+
+<p>Best regards,<br>
+David Chen<br>
+<em>Senior Systems Administrator</em><br>
+BigCorp IT Helpdesk</p>
+
+<!-- Tracking pixel -->
+<img src="http://198.51.100.77/pixel.gif?id=j.smith&c=9f3a7b" width="1" height="1" alt="">
+
+</td></tr>
+</table>
+</body>
+</html>
+
+------=_Part_8838_472910556.1739798051--
+
+------=_Part_8837_1920534112.1739798051
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document;
+	name="Mailbox_Storage_Policy_2024.docm"
+Content-Disposition: attachment; filename="Mailbox_Storage_Policy_2024.docm"
+Content-Transfer-Encoding: base64
+
+UEsDBBQAAAAIAGFiV1IAAAAAAAAAAAAAAAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbE2O
+wQ7CIBCG7ya+A9lradWDMUbpwejRauIDTGFaSoBlmUV9e6He3GS++f7Jn83X05jEhYMf
+HAm4zXIQTMbZjjoBh/a9WIPwEcni5IgF3NjDtrzenJKLkdZ87EMRDJMJIDzE3ChlfOMp
+YGYO5Y3TZFnGTnmlR2yhWub5Si0OIlPBdIrihwdRt73hxg+xQfanPUHnCaKqX+OoMIqL
+YBnfj3GFfgBQSwECFAAUAAAACABhYldSAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAApIEAAAAA
+W0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAAAQABAEEAAAAxAAAAAAA=
+
+------=_Part_8837_1920534112.1739798051--
