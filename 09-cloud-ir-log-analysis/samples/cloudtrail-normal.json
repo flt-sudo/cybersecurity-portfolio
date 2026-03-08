@@ -1,0 +1,647 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson",
+        "sessionContext": {
+          "attributes": {
+            "mfaAuthenticated": "true",
+            "creationDate": "2025-11-15T08:02:31Z"
+          }
+        }
+      },
+      "eventTime": "2025-11-15T08:02:31Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/119.0.0.0 Safari/537.36",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "MFAUsed": "Yes",
+        "LoginTo": "https://console.aws.amazon.com/console/home",
+        "MobileVersion": "No"
+      },
+      "eventID": "a1b2c3d4-1111-2222-3333-a1b2c3d4e5f6",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T08:05:12Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.ec2.amazonaws.com",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "a1b2c3d4-2222-3333-4444-b2c3d4e5f6a7",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T08:07:45Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListBuckets",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.s3.amazonaws.com",
+      "requestParameters": {
+        "Host": "s3.us-east-1.amazonaws.com"
+      },
+      "responseElements": null,
+      "eventID": "b2c3d4e5-3333-4444-5555-c3d4e5f6a7b8",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T08:10:33Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetBucketLocation",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.s3.amazonaws.com",
+      "requestParameters": {
+        "bucketName": "company-web-assets",
+        "Host": "company-web-assets.s3.us-east-1.amazonaws.com"
+      },
+      "responseElements": null,
+      "eventID": "c3d4e5f6-4444-5555-6666-d4e5f6a7b8c9",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ45Q7YFFAREXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/bob.smith",
+        "accountId": "123456789012",
+        "userName": "bob.smith",
+        "sessionContext": {
+          "attributes": {
+            "mfaAuthenticated": "true",
+            "creationDate": "2025-11-15T08:30:00Z"
+          }
+        }
+      },
+      "eventTime": "2025-11-15T08:30:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.20",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/119.0.0.0 Safari/537.36",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "MFAUsed": "Yes",
+        "LoginTo": "https://console.aws.amazon.com/console/home",
+        "MobileVersion": "No"
+      },
+      "eventID": "d4e5f6a7-5555-6666-7777-e5f6a7b8c9d0",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ45Q7YFFAREXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/bob.smith",
+        "accountId": "123456789012",
+        "userName": "bob.smith"
+      },
+      "eventTime": "2025-11-15T08:35:22Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSecurityGroups",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.20",
+      "userAgent": "console.ec2.amazonaws.com",
+      "requestParameters": {
+        "securityGroupSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "e5f6a7b8-6666-7777-8888-f6a7b8c9d0e1",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ45Q7YFFAREXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/bob.smith",
+        "accountId": "123456789012",
+        "userName": "bob.smith"
+      },
+      "eventTime": "2025-11-15T08:40:18Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.20",
+      "userAgent": "console.ec2.amazonaws.com",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "f6a7b8c9-7777-8888-9999-a7b8c9d0e1f2",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "invokedBy": "elasticloadbalancing.amazonaws.com"
+      },
+      "eventTime": "2025-11-15T09:00:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "elasticloadbalancing.amazonaws.com",
+      "userAgent": "elasticloadbalancing.amazonaws.com",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing",
+        "roleSessionName": "ELBSession"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIACKCEVSQ6C2EXAMPLE",
+          "expiration": "2025-11-15T15:00:00Z",
+          "sessionToken": "FwoGZXIvYXdzEBYaD..."
+        },
+        "assumedRoleUser": {
+          "assumedRoleId": "AROACKCEVSQ6C2EXAMPLE:ELBSession",
+          "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForElasticLoadBalancing/ELBSession"
+        }
+      },
+      "eventID": "a7b8c9d0-8888-9999-aaaa-b8c9d0e1f2a3",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T09:15:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.iam.amazonaws.com",
+      "requestParameters": {
+        "maxItems": 100
+      },
+      "responseElements": null,
+      "eventID": "b8c9d0e1-9999-aaaa-bbbb-c9d0e1f2a3b4",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T09:20:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "GetAccountSummary",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.iam.amazonaws.com",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "c9d0e1f2-aaaa-bbbb-cccc-d0e1f2a3b4c5",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ45Q7YFFAREXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/bob.smith",
+        "accountId": "123456789012",
+        "userName": "bob.smith"
+      },
+      "eventTime": "2025-11-15T09:45:33Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeVpcs",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.20",
+      "userAgent": "console.ec2.amazonaws.com",
+      "requestParameters": {
+        "vpcSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "d0e1f2a3-bbbb-cccc-dddd-e1f2a3b4c5d6",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ45Q7YFFAREXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/bob.smith",
+        "accountId": "123456789012",
+        "userName": "bob.smith"
+      },
+      "eventTime": "2025-11-15T09:50:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSubnets",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.20",
+      "userAgent": "console.ec2.amazonaws.com",
+      "requestParameters": {
+        "subnetSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "e1f2a3b4-cccc-dddd-eeee-f2a3b4c5d6e7",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T10:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.s3.amazonaws.com",
+      "requestParameters": {
+        "bucketName": "company-web-assets",
+        "key": "images/logo.png",
+        "Host": "company-web-assets.s3.us-east-1.amazonaws.com"
+      },
+      "responseElements": null,
+      "eventID": "f2a3b4c5-dddd-eeee-ffff-a3b4c5d6e7f8",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T10:05:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.s3.amazonaws.com",
+      "requestParameters": {
+        "bucketName": "company-web-assets",
+        "key": "images/banner-update.png",
+        "Host": "company-web-assets.s3.us-east-1.amazonaws.com"
+      },
+      "responseElements": null,
+      "eventID": "a3b4c5d6-eeee-ffff-0000-b4c5d6e7f8a9",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "invokedBy": "cloudformation.amazonaws.com"
+      },
+      "eventTime": "2025-11-15T10:30:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "cloudformation.amazonaws.com",
+      "userAgent": "cloudformation.amazonaws.com",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/CloudFormationExecutionRole",
+        "roleSessionName": "AWSCloudFormation"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIAJ45Q7YFFAREXAMPLE",
+          "expiration": "2025-11-15T16:30:00Z",
+          "sessionToken": "FwoGZXIvYXdzEBYaE..."
+        },
+        "assumedRoleUser": {
+          "assumedRoleId": "AROAJ45Q7YFFAREXAMPLE:AWSCloudFormation",
+          "arn": "arn:aws:sts::123456789012:assumed-role/CloudFormationExecutionRole/AWSCloudFormation"
+        }
+      },
+      "eventID": "b4c5d6e7-ffff-0000-1111-c5d6e7f8a9b0",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ45Q7YFFAREXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/bob.smith",
+        "accountId": "123456789012",
+        "userName": "bob.smith"
+      },
+      "eventTime": "2025-11-15T10:45:00Z",
+      "eventSource": "cloudwatch.amazonaws.com",
+      "eventName": "DescribeAlarms",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.20",
+      "userAgent": "console.cloudwatch.amazonaws.com",
+      "requestParameters": {
+        "maxRecords": 100
+      },
+      "responseElements": null,
+      "eventID": "c5d6e7f8-0000-1111-2222-d6e7f8a9b0c1",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T11:00:00Z",
+      "eventSource": "lambda.amazonaws.com",
+      "eventName": "ListFunctions20150331",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.lambda.amazonaws.com",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "d6e7f8a9-1111-2222-3333-e7f8a9b0c1d2",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ45Q7YFFAREXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/bob.smith",
+        "accountId": "123456789012",
+        "userName": "bob.smith"
+      },
+      "eventTime": "2025-11-15T11:15:00Z",
+      "eventSource": "rds.amazonaws.com",
+      "eventName": "DescribeDBInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.20",
+      "userAgent": "console.rds.amazonaws.com",
+      "requestParameters": {},
+      "responseElements": null,
+      "eventID": "e7f8a9b0-2222-3333-4444-f8a9b0c1d2e3",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T11:30:00Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "DescribeTrails",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.cloudtrail.amazonaws.com",
+      "requestParameters": {
+        "trailNameList": []
+      },
+      "responseElements": null,
+      "eventID": "f8a9b0c1-3333-4444-5555-a9b0c1d2e3f4",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T11:45:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "GetAccountAuthorizationDetails",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.iam.amazonaws.com",
+      "requestParameters": {
+        "filter": ["User", "Role", "Group", "LocalManagedPolicy", "AWSManagedPolicy"]
+      },
+      "responseElements": null,
+      "eventID": "a9b0c1d2-4444-5555-6666-b0c1d2e3f4a5",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ45Q7YFFAREXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/bob.smith",
+        "accountId": "123456789012",
+        "userName": "bob.smith"
+      },
+      "eventTime": "2025-11-15T12:00:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeImages",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.20",
+      "userAgent": "console.ec2.amazonaws.com",
+      "requestParameters": {
+        "imagesSet": {},
+        "ownersSet": {"items": [{"owner": "self"}]},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "b0c1d2e3-5555-6666-7777-c1d2e3f4a5b6",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ45Q7YFFAREXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/bob.smith",
+        "accountId": "123456789012",
+        "userName": "bob.smith"
+      },
+      "eventTime": "2025-11-15T12:15:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeKeyPairs",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.20",
+      "userAgent": "console.ec2.amazonaws.com",
+      "requestParameters": {
+        "keySet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "c1d2e3f4-6666-7777-8888-d2e3f4a5b6c7",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::123456789012:user/alice.johnson",
+        "accountId": "123456789012",
+        "userName": "alice.johnson"
+      },
+      "eventTime": "2025-11-15T12:30:00Z",
+      "eventSource": "kms.amazonaws.com",
+      "eventName": "ListKeys",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.10",
+      "userAgent": "console.kms.amazonaws.com",
+      "requestParameters": {
+        "limit": 100
+      },
+      "responseElements": null,
+      "eventID": "d2e3f4a5-7777-8888-9999-e3f4a5b6c7d8",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    }
+  ]
+}

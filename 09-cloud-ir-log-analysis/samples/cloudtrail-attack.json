@@ -1,0 +1,859 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos",
+        "sessionContext": {
+          "attributes": {
+            "mfaAuthenticated": "false",
+            "creationDate": "2025-11-18T02:14:33Z"
+          }
+        }
+      },
+      "eventTime": "2025-11-18T02:14:33Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/118.0.0.0 Safari/537.36",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "MFAUsed": "No",
+        "LoginTo": "https://console.aws.amazon.com/console/home",
+        "MobileVersion": "No"
+      },
+      "eventID": "deadbeef-0001-attack-0001-000000000001",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:16:05Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "GetCallerIdentity",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "deadbeef-0002-attack-0002-000000000002",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:17:22Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "maxItems": 1000
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0003-attack-0003-000000000003",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:17:55Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListRoles",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "maxItems": 1000
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0004-attack-0004-000000000004",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:18:40Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListAttachedUserPolicies",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "userName": "dev-carlos"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0005-attack-0005-000000000005",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:19:15Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListBuckets",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "Host": "s3.us-east-1.amazonaws.com"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0006-attack-0006-000000000006",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:20:02Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0007-attack-0007-000000000007",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:20:45Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSecurityGroups",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "securityGroupSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0008-attack-0008-000000000008",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:25:10Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "userName": "dev-carlos",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0009-attack-0009-000000000009",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:28:33Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateUser",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "userName": "svc-backup-ops"
+      },
+      "responseElements": {
+        "user": {
+          "path": "/",
+          "userName": "svc-backup-ops",
+          "userId": "AIDAEXAMPLEBACKUPUSER",
+          "arn": "arn:aws:iam::123456789012:user/svc-backup-ops",
+          "createDate": "2025-11-18T02:28:33Z"
+        }
+      },
+      "eventID": "deadbeef-0010-attack-0010-000000000010",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:29:05Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "userName": "svc-backup-ops",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0011-attack-0011-000000000011",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:29:44Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "userName": "svc-backup-ops"
+      },
+      "responseElements": {
+        "accessKey": {
+          "userName": "svc-backup-ops",
+          "accessKeyId": "AKIAEXAMPLEBACKUPKEY",
+          "status": "Active",
+          "createDate": "2025-11-18T02:29:44Z"
+        }
+      },
+      "eventID": "deadbeef-0012-attack-0012-000000000012",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:30:12Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateLoginProfile",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "userName": "svc-backup-ops",
+        "passwordResetRequired": false
+      },
+      "responseElements": {
+        "loginProfile": {
+          "userName": "svc-backup-ops",
+          "createDate": "2025-11-18T02:30:12Z",
+          "passwordResetRequired": false
+        }
+      },
+      "eventID": "deadbeef-0013-attack-0013-000000000013",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:35:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetBucketPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "policy": ""
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0014-attack-0014-000000000014",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:36:10Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListObjects",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "prefix": "",
+        "encoding-type": "url"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0015-attack-0015-000000000015",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:37:22Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "key": "employee-records/salaries-2025.xlsx"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0016-attack-0016-000000000016",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:37:45Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "key": "employee-records/ssn-directory.csv"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0017-attack-0017-000000000017",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:38:02Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "key": "employee-records/performance-reviews-2025.pdf"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0018-attack-0018-000000000018",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:38:15Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "key": "employee-records/benefits-enrollment.xlsx"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0019-attack-0019-000000000019",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:38:30Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "key": "financial/quarterly-report-q3-2025.pdf"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0020-attack-0020-000000000020",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:38:48Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "key": "financial/board-compensation-2025.xlsx"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0021-attack-0021-000000000021",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:39:05Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "key": "legal/pending-litigation.docx"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0022-attack-0022-000000000022",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Data"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:45:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutBucketPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "bucketPolicy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "AllowPublicRead",
+              "Effect": "Allow",
+              "Principal": "*",
+              "Action": "s3:GetObject",
+              "Resource": "arn:aws:s3:::confidential-hr-data/*"
+            }
+          ]
+        }
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0023-attack-0023-000000000023",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:47:30Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "DeleteBucketEncryption",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "bucketName": "confidential-hr-data",
+        "Host": "confidential-hr-data.s3.us-east-1.amazonaws.com",
+        "encryption": ""
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0024-attack-0024-000000000024",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:50:00Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "StopLogging",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "name": "arn:aws:cloudtrail:us-east-1:123456789012:trail/organization-trail"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0025-attack-0025-000000000025",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T02:51:15Z",
+      "eventSource": "guardduty.amazonaws.com",
+      "eventName": "DeleteDetector",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "detectorId": "d4c5b6a7e8f901234567890abcdef012"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0026-attack-0026-000000000026",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T03:00:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "AuthorizeSecurityGroupIngress",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "groupId": "sg-0abcdef1234567890",
+        "ipPermissions": {
+          "items": [
+            {
+              "ipProtocol": "tcp",
+              "fromPort": 22,
+              "toPort": 22,
+              "ipRanges": {
+                "items": [
+                  {
+                    "cidrIp": "0.0.0.0/0",
+                    "description": "temp access"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "responseElements": {
+        "_return": true
+      },
+      "eventID": "deadbeef-0027-attack-0027-000000000027",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T03:05:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::987654321098:role/CrossAccountAdmin",
+        "roleSessionName": "backup-session"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIAEXAMPLECROSSACCT",
+          "expiration": "2025-11-18T09:05:00Z",
+          "sessionToken": "FwoGZXIvYXdzEBYaDx..."
+        },
+        "assumedRoleUser": {
+          "assumedRoleId": "AROAEXAMPLECROSSACCT:backup-session",
+          "arn": "arn:aws:sts::987654321098:assumed-role/CrossAccountAdmin/backup-session"
+        }
+      },
+      "eventID": "deadbeef-0028-attack-0028-000000000028",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE12345ATTCK",
+        "arn": "arn:aws:iam::123456789012:user/dev-carlos",
+        "accountId": "123456789012",
+        "userName": "dev-carlos"
+      },
+      "eventTime": "2025-11-18T04:10:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "PutUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-1040-aws",
+      "requestParameters": {
+        "userName": "dev-carlos",
+        "policyName": "EmergencyFullAccess",
+        "policyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":\"*\",\"Resource\":\"*\"}]}"
+      },
+      "responseElements": null,
+      "eventID": "deadbeef-0029-attack-0029-000000000029",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    }
+  ]
+}

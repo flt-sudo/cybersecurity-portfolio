@@ -1,0 +1,605 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:05:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "GetCallerIdentity",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "cafebabe-0001-mine-0001-000000000001",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:06:30Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeRegions",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "regionSet": {}
+      },
+      "responseElements": null,
+      "eventID": "cafebabe-0002-mine-0002-000000000002",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:07:15Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstanceTypeOfferings",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "locationType": "region",
+        "filterSet": {
+          "items": [
+            {
+              "name": "instance-type",
+              "valueSet": {
+                "items": [{"value": "p3.2xlarge"}, {"value": "p3.8xlarge"}, {"value": "g4dn.xlarge"}]
+              }
+            }
+          ]
+        }
+      },
+      "responseElements": null,
+      "eventID": "cafebabe-0003-mine-0003-000000000003",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:08:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "CreateKeyPair",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "keyName": "temp-ops-key-sg"
+      },
+      "responseElements": {
+        "keyName": "temp-ops-key-sg",
+        "keyFingerprint": "1f:51:ae:28:bf:89:e9:d8:1f:25:5d:37:2d:7d:b8:ca:9f:f5:b1:6f",
+        "keyPairId": "key-0abcdef1234567890"
+      },
+      "eventID": "cafebabe-0004-mine-0004-000000000004",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:09:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "CreateSecurityGroup",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "groupName": "launch-wizard-99",
+        "groupDescription": "launch-wizard-99 created on 2025-11-20",
+        "vpcId": "vpc-0abc123def456789a"
+      },
+      "responseElements": {
+        "groupId": "sg-0mining123456789a",
+        "_return": true
+      },
+      "eventID": "cafebabe-0005-mine-0005-000000000005",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:09:30Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "AuthorizeSecurityGroupIngress",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "groupId": "sg-0mining123456789a",
+        "ipPermissions": {
+          "items": [
+            {
+              "ipProtocol": "-1",
+              "fromPort": -1,
+              "toPort": -1,
+              "ipRanges": {
+                "items": [
+                  {
+                    "cidrIp": "0.0.0.0/0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "responseElements": {
+        "_return": true
+      },
+      "eventID": "cafebabe-0006-mine-0006-000000000006",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:10:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "instancesSet": {
+          "items": [
+            {
+              "imageId": "ami-0abcdef1234567890",
+              "minCount": 4,
+              "maxCount": 4,
+              "keyName": "temp-ops-key-sg",
+              "instanceType": "p3.8xlarge"
+            }
+          ]
+        },
+        "groupSet": {
+          "items": [
+            {"groupId": "sg-0mining123456789a"}
+          ]
+        }
+      },
+      "responseElements": {
+        "instancesSet": {
+          "items": [
+            {"instanceId": "i-0mining00000000001", "instanceType": "p3.8xlarge", "currentState": {"code": 0, "name": "pending"}},
+            {"instanceId": "i-0mining00000000002", "instanceType": "p3.8xlarge", "currentState": {"code": 0, "name": "pending"}},
+            {"instanceId": "i-0mining00000000003", "instanceType": "p3.8xlarge", "currentState": {"code": 0, "name": "pending"}},
+            {"instanceId": "i-0mining00000000004", "instanceType": "p3.8xlarge", "currentState": {"code": 0, "name": "pending"}}
+          ]
+        }
+      },
+      "eventID": "cafebabe-0007-mine-0007-000000000007",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:12:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "CreateKeyPair",
+      "awsRegion": "eu-west-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "keyName": "temp-ops-key-eu"
+      },
+      "responseElements": {
+        "keyName": "temp-ops-key-eu",
+        "keyFingerprint": "2a:62:bf:39:cf:9a:fa:e9:2a:36:6e:48:3e:8e:c9:da:0a:a6:c2:7a",
+        "keyPairId": "key-0euwest1234567890"
+      },
+      "eventID": "cafebabe-0008-mine-0008-000000000008",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:12:30Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "CreateSecurityGroup",
+      "awsRegion": "eu-west-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "groupName": "launch-wizard-100",
+        "groupDescription": "launch-wizard-100 created on 2025-11-20",
+        "vpcId": "vpc-0eu123def456789b"
+      },
+      "responseElements": {
+        "groupId": "sg-0miningeu23456789",
+        "_return": true
+      },
+      "eventID": "cafebabe-0009-mine-0009-000000000009",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:13:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "AuthorizeSecurityGroupIngress",
+      "awsRegion": "eu-west-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "groupId": "sg-0miningeu23456789",
+        "ipPermissions": {
+          "items": [
+            {
+              "ipProtocol": "-1",
+              "fromPort": -1,
+              "toPort": -1,
+              "ipRanges": {
+                "items": [
+                  {
+                    "cidrIp": "0.0.0.0/0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "responseElements": {
+        "_return": true
+      },
+      "eventID": "cafebabe-0010-mine-0010-000000000010",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:14:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "eu-west-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "instancesSet": {
+          "items": [
+            {
+              "imageId": "ami-0euwest1234567890",
+              "minCount": 4,
+              "maxCount": 4,
+              "keyName": "temp-ops-key-eu",
+              "instanceType": "p3.8xlarge"
+            }
+          ]
+        },
+        "groupSet": {
+          "items": [
+            {"groupId": "sg-0miningeu23456789"}
+          ]
+        }
+      },
+      "responseElements": {
+        "instancesSet": {
+          "items": [
+            {"instanceId": "i-0miningeu000000001", "instanceType": "p3.8xlarge", "currentState": {"code": 0, "name": "pending"}},
+            {"instanceId": "i-0miningeu000000002", "instanceType": "p3.8xlarge", "currentState": {"code": 0, "name": "pending"}},
+            {"instanceId": "i-0miningeu000000003", "instanceType": "p3.8xlarge", "currentState": {"code": 0, "name": "pending"}},
+            {"instanceId": "i-0miningeu000000004", "instanceType": "p3.8xlarge", "currentState": {"code": 0, "name": "pending"}}
+          ]
+        }
+      },
+      "eventID": "cafebabe-0011-mine-0011-000000000011",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:15:30Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "ModifyInstanceAttribute",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "instanceId": "i-0mining00000000001",
+        "disableApiTermination": {
+          "value": true
+        }
+      },
+      "responseElements": {
+        "_return": true
+      },
+      "eventID": "cafebabe-0012-mine-0012-000000000012",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:16:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "ModifyInstanceAttribute",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "instanceId": "i-0mining00000000002",
+        "disableApiTermination": {
+          "value": true
+        }
+      },
+      "responseElements": {
+        "_return": true
+      },
+      "eventID": "cafebabe-0013-mine-0013-000000000013",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:18:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "userName": "deploy-pipeline"
+      },
+      "responseElements": {
+        "accessKey": {
+          "userName": "deploy-pipeline",
+          "accessKeyId": "AKIAEXAMPLEDEPLOY002",
+          "status": "Active",
+          "createDate": "2025-11-20T01:18:00Z"
+        }
+      },
+      "eventID": "cafebabe-0014-mine-0014-000000000014",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:20:00Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "UpdateTrail",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "name": "organization-trail",
+        "isMultiRegionTrail": false,
+        "enableLogFileValidation": false
+      },
+      "responseElements": {
+        "name": "organization-trail",
+        "isMultiRegionTrail": false,
+        "logFileValidationEnabled": false,
+        "trailARN": "arn:aws:cloudtrail:us-east-1:123456789012:trail/organization-trail"
+      },
+      "eventID": "cafebabe-0015-mine-0015-000000000015",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:22:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "sa-east-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "instancesSet": {
+          "items": [
+            {
+              "imageId": "ami-0saeast1234567890",
+              "minCount": 2,
+              "maxCount": 2,
+              "instanceType": "g4dn.xlarge"
+            }
+          ]
+        },
+        "groupSet": {}
+      },
+      "responseElements": {
+        "instancesSet": {
+          "items": [
+            {"instanceId": "i-0miningsa000000001", "instanceType": "g4dn.xlarge", "currentState": {"code": 0, "name": "pending"}},
+            {"instanceId": "i-0miningsa000000002", "instanceType": "g4dn.xlarge", "currentState": {"code": 0, "name": "pending"}}
+          ]
+        }
+      },
+      "eventID": "cafebabe-0016-mine-0016-000000000016",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE67890MINER",
+        "arn": "arn:aws:iam::123456789012:user/deploy-pipeline",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAEXAMPLEDEPLOY001"
+      },
+      "eventTime": "2025-11-20T01:25:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.100",
+      "userAgent": "aws-cli/2.13.0 Python/3.11.4 Linux/5.15.0-generic",
+      "requestParameters": {
+        "instancesSet": {
+          "items": [
+            {"instanceId": "i-0mining00000000001"},
+            {"instanceId": "i-0mining00000000002"},
+            {"instanceId": "i-0mining00000000003"},
+            {"instanceId": "i-0mining00000000004"}
+          ]
+        },
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "cafebabe-0017-mine-0017-000000000017",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    }
+  ]
+}
