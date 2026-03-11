@@ -1,26 +1,22 @@
-# Cybersecurity Portfolio
+# Cybersecurity Operations Toolkit
 
 **SOC Analyst | Security Operations | Incident Response**
 
-Hands-on cybersecurity projects demonstrating real-world defensive security skills. Built on Kali Linux with open-source tools used in production SOC environments.
+Defensive security tools, automation scripts, and investigation workflows built on Kali Linux with open-source tooling used in production SOC environments.
 
-## About Me
+## What's Here
 
-Security-focused professional currently completing the Google Cybersecurity Professional Certificate. Experienced with SIEM platforms, log analysis, network traffic analysis, vulnerability management, and incident response frameworks. Looking for remote SOC Analyst / Security Operations roles.
-
-## Projects
-
-| # | Project | Skills Demonstrated |
-|---|---------|-------------------|
-| 1 | [SIEM Home Lab (Wazuh)](./01-siem-home-lab/) | SIEM deployment, log ingestion, alert triage, custom detection rules |
-| 2 | [Phishing Analysis Playbook](./02-phishing-analysis/) | Email header analysis, IOC extraction, threat intelligence |
-| 3 | [Vulnerability Assessment](./03-vulnerability-assessment/) | Nmap scanning, vulnerability scoring (CVSS), risk reporting |
-| 4 | [Security Automation Scripts](./04-security-automation/) | Python scripting, log parsing, hash lookups, automated alerting |
-| 5 | [Incident Response Write-ups](./05-incident-response/) | NIST IR framework, containment strategies, post-incident reporting |
-| 6 | [Network Traffic Analysis](./06-network-traffic-analysis/) | Wireshark, tcpdump, packet analysis, anomaly detection |
-| 7 | [NIST Compliance Checker](./07-nist-compliance-tool/) | NIST CSF, compliance auditing, risk assessment, GRC |
-| 8 | [AWS Security Audit](./08-aws-security-audit/) | AWS IAM, S3, EC2, CloudTrail auditing, CIS Benchmarks |
-| 9 | [Cloud IR & Log Analysis](./09-cloud-ir-log-analysis/) | CloudTrail analysis, cloud threat detection, MITRE ATT&CK Cloud |
+| Tool | What It Does |
+|------|-------------|
+| [SIEM Threat Detection](./siem-threat-detection/) | Wazuh SIEM deployment with custom detection rules for brute-force, SQLi, XSS, and file integrity monitoring. Includes alert triage playbook and MITRE ATT&CK-mapped detection scenarios. |
+| [Phishing Analysis](./phishing-analysis/) | Email header forensics and IOC extraction toolkit. Parses .eml files, extracts indicators (IPs, domains, hashes), supports defang/refang for safe sharing. |
+| [Vulnerability Assessment](./vulnerability-assessment/) | Nmap wrapper with scan profiles, automated XML parsing, CVSS severity scoring, and Markdown report generation for stakeholder delivery. |
+| [Security Automation](./security-automation/) | Five Python tools for SOC workflows: log parser, hash checker (VirusTotal), port monitor, IP reputation (AbuseIPDB), and file integrity monitor. Zero dependencies. |
+| [Incident Response](./incident-response/) | NIST 800-61 playbooks for malware, ransomware, and phishing incidents. Includes two full investigation write-ups with timelines and ATT&CK mappings. |
+| [Network Traffic Analysis](./network-traffic-analysis/) | Pcap analyzer and DNS anomaly detector. Flags C2 beaconing, port scans, DGA domains, and DNS tunneling. Wireshark and tcpdump filter references included. |
+| [NIST Compliance Tool](./nist-compliance-tool/) | NIST CSF v1.1 assessment engine. Interactive or file-based input, weighted scoring across 43 controls, maturity tier calculation, and gap analysis with remediation roadmap. |
+| [AWS Security Audit](./aws-security-audit/) | Automated security checks across IAM, S3, EC2, CloudTrail, and RDS mapped to CIS AWS Foundations Benchmark v2.0. Includes demo mode for evaluation without credentials. |
+| [Cloud IR & Log Analysis](./cloud-ir-log-analysis/) | CloudTrail log analysis for cloud incident investigations. Detects credential compromise, privilege escalation, crypto mining, and data exfiltration. Fully offline with sample attack scenarios. |
 
 ## Tools & Technologies
 

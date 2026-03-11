@@ -30,10 +30,10 @@ Each function contains 4-6 control categories with specific assessment questions
 
 ---
 
-## Project Structure
+## Structure
 
 ```
-07-nist-compliance-tool/
+nist-compliance-tool/
 |-- README.md                              # This file
 |-- src/
 |   |-- compliance_checker.py              # Main assessment engine
@@ -364,7 +364,6 @@ Assessment
 
 - **Self-assessment:** Small and mid-size organizations conducting internal NIST CSF gap assessments
 - **Consulting engagements:** GRC consultants performing compliance assessments for clients
-- **Portfolio demonstration:** Security professionals demonstrating GRC skills and tooling proficiency
 - **Baseline measurement:** Establishing an initial compliance baseline before implementing a security program
 - **Progress tracking:** Running periodic assessments to measure compliance improvement over time
 

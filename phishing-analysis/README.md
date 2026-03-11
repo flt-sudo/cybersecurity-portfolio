@@ -1,11 +1,11 @@
 # Phishing Analysis Toolkit
 
-A collection of scripts, playbooks, and reference materials for analyzing suspected phishing emails in a Security Operations Center (SOC) environment. This project demonstrates practical skills in email header forensics, indicator-of-compromise (IOC) extraction, and structured incident response.
+Scripts, playbooks, and reference materials for analyzing suspected phishing emails in a SOC environment. Covers email header forensics, indicator-of-compromise (IOC) extraction, and structured incident response.
 
-## Project Structure
+## Structure
 
 ```
-02-phishing-analysis/
+phishing-analysis/
 ├── README.md
 ├── scripts/
 │   ├── email_header_analyzer.py   # Parse and analyze raw .eml files
@@ -74,10 +74,6 @@ python3 scripts/ioc_extractor.py -f report.txt --defang
 
 - Python 3.8 or later
 - Standard library only -- no third-party packages required
-
-## Intended Audience
-
-This toolkit is built for SOC analysts (Tier 1 and Tier 2) who handle phishing reports as part of daily operations. It is also useful as a portfolio demonstration of email forensics and incident response skills.
 
 ## Disclaimer
 

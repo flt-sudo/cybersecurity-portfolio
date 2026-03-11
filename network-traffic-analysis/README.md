@@ -2,10 +2,9 @@
 
 ## Overview
 
-This project demonstrates practical network traffic analysis skills used daily in
-SOC and incident response roles. It covers packet-level inspection, protocol
-analysis, threat detection through network telemetry, and structured investigation
-workflows mapped to the MITRE ATT&CK framework.
+Packet-level inspection, protocol analysis, threat detection through network
+telemetry, and structured investigation workflows mapped to the MITRE ATT&CK
+framework.
 
 Network traffic analysis is a core defensive skill. Attackers must use the network
 to reach objectives -- whether exfiltrating data, communicating with C2
@@ -23,10 +22,10 @@ interpret that traffic is essential for detection and response.
 | **Scapy** | Referenced as production-grade packet manipulation library |
 | **BPF (Berkeley Packet Filter)** | Kernel-level capture filter syntax for tcpdump |
 
-## Project Structure
+## Structure
 
 ```
-06-network-traffic-analysis/
+network-traffic-analysis/
 ├── README.md                              # This file
 ├── captures/                              # Directory for pcap files (samples not included due to size)
 ├── scripts/
@@ -107,19 +106,14 @@ python3 scripts/dns_analyzer.py --logfile dns_queries.log --entropy-threshold 3.
 python3 scripts/dns_analyzer.py --logfile dns_queries.log --json dns_report.json
 ```
 
-## Key Concepts Demonstrated
+## Key Concepts
 
-- **Packet structure understanding** -- Parsing Ethernet frames, IP headers, and
-  transport layer headers at the byte level
+- **Packet structure** -- Parsing Ethernet frames, IP headers, and transport layer headers at the byte level
 - **Traffic baselining** -- Identifying what normal looks like so anomalies stand out
-- **Protocol analysis** -- Understanding expected behavior for DNS, HTTP/S, SMB, and
-  other protocols to spot misuse
-- **Statistical detection** -- Using frequency, entropy, and timing analysis to find
-  threats that signature-based tools miss
-- **Structured investigation** -- Following a repeatable methodology from alert to
-  conclusion with documented evidence
-- **MITRE ATT&CK mapping** -- Connecting observed network behaviors to adversary
-  techniques for consistent reporting
+- **Protocol analysis** -- Understanding expected behavior for DNS, HTTP/S, SMB to spot misuse
+- **Statistical detection** -- Frequency, entropy, and timing analysis to find threats signature-based tools miss
+- **Structured investigation** -- Repeatable methodology from alert to conclusion with documented evidence
+- **MITRE ATT&CK mapping** -- Connecting observed network behaviors to adversary techniques
 
 ## Note on Dependencies
 

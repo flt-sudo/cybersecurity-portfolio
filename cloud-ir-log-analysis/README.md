@@ -1,14 +1,13 @@
 # Cloud Incident Response & Log Analysis
 
-Offline analysis toolkit for investigating AWS CloudTrail logs. Designed for
-security analysts who need to demonstrate cloud IR skills without requiring
-access to a live AWS account. All scripts operate on local JSON files and use
-only the Python standard library.
+Offline analysis toolkit for investigating AWS CloudTrail logs. All scripts
+operate on local JSON files and use only the Python standard library -- no
+AWS account required.
 
-## Project Structure
+## Structure
 
 ```
-09-cloud-ir-log-analysis/
+cloud-ir-log-analysis/
 ├── README.md
 ├── scripts/
 │   ├── cloudtrail_analyzer.py   # CloudTrail log parser and threat detector
@@ -149,9 +148,8 @@ A compromised service account access key used to:
 
 ## Design Decisions
 
-**No AWS account required.** Every script works with local JSON files. This
-makes the project portable, safe to run anywhere, and suitable for a portfolio
-where live AWS access is not available.
+**No AWS account required.** Every script works with local JSON files. Portable
+and safe to run anywhere.
 
 **Standard library only.** No third-party packages means zero setup friction.
 Clone the repo and run the scripts immediately.

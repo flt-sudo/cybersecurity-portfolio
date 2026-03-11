@@ -1,10 +1,10 @@
-# SIEM Home Lab: Wazuh Deployment on Ubuntu Server
+# SIEM Threat Detection: Wazuh on Ubuntu Server
 
 ## Overview
 
-This project documents a fully functional SIEM home lab built to develop hands-on experience with threat detection, log analysis, and incident response. The environment uses **Wazuh 4.7** (open-source SIEM/XDR platform) deployed as a single-node installation on Ubuntu Server 22.04 LTS, monitoring a Kali Linux endpoint acting as both an attack surface and adversary simulation host.
+Fully functional SIEM environment running **Wazuh 4.7** (open-source SIEM/XDR) as a single-node installation on Ubuntu Server 22.04 LTS, monitoring a Kali Linux endpoint acting as both attack surface and adversary simulation host.
 
-The lab was used to generate, detect, triage, and document real security events mapped to the MITRE ATT&CK framework.
+Generates, detects, triages, and documents security events mapped to the MITRE ATT&CK framework.
 
 ## Objectives
 
@@ -51,10 +51,10 @@ The lab was used to generate, detect, triage, and document real security events 
                     +----------------+
 ```
 
-## Project Structure
+## Structure
 
 ```
-01-siem-home-lab/
+siem-threat-detection/
 |-- README.md                          # This file
 |-- configs/
 |   +-- ossec.conf                     # Wazuh agent configuration (endpoint)
@@ -72,9 +72,9 @@ The lab was used to generate, detect, triage, and document real security events 
     +-- sqli-detection-alert.png
 ```
 
-## Key Technical Skills Demonstrated
+## Capabilities
 
-| Skill Area | Details |
+| Area | Details |
 |---|---|
 | SIEM Deployment | Single-node Wazuh 4.7 installation (Manager, Indexer, Dashboard) on Ubuntu Server |
 | Log Collection | Syslog, auth.log, Apache access/error logs, audit logs via Wazuh agent |

@@ -6,10 +6,10 @@ All scripts include a `--demo` mode that runs against realistic mock data, allow
 
 ---
 
-## Project Structure
+## Structure
 
 ```
-08-aws-security-audit/
+aws-security-audit/
 |-- README.md                              # This file
 |-- scripts/
 |   |-- aws_security_auditor.py            # Main comprehensive audit tool

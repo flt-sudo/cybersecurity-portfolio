@@ -12,10 +12,10 @@ A collection of Python-based security automation scripts designed for SOC analys
 | `ip_reputation.py` | IP address threat intelligence | Queries AbuseIPDB API or local threat feeds; bulk lookups with CSV output |
 | `file_integrity_monitor.py` | File integrity monitoring (FIM) | Baselines file hashes, permissions, and timestamps; detects unauthorized changes |
 
-## Directory Structure
+## Structure
 
 ```
-04-security-automation/
+security-automation/
 ├── README.md                       # This file
 ├── scripts/
 │   ├── log_parser.py               # Multi-format security log analyzer
@@ -154,4 +154,4 @@ Some scripts integrate with external threat intelligence APIs. These are optiona
 
 ## License
 
-This project is part of a cybersecurity portfolio. Scripts are provided for educational and professional demonstration purposes.
+MIT License.

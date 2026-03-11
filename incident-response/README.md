@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project contains a comprehensive set of incident response (IR) playbooks, report templates, simulated scenario write-ups, and reference documentation aligned with the **NIST SP 800-61 Rev. 2** *Computer Security Incident Handling Guide*. The materials reflect the processes, tooling, and decision-making expected in a modern Security Operations Center (SOC) environment.
+Comprehensive set of incident response (IR) playbooks, report templates, simulated scenario write-ups, and reference documentation aligned with the **NIST SP 800-61 Rev. 2** *Computer Security Incident Handling Guide*. Reflects the processes, tooling, and decision-making expected in a modern SOC environment.
 
 Every artifact in this repository is designed to be operationally useful -- not theoretical. Playbooks contain specific commands, tool references, and escalation criteria. Scenario write-ups follow realistic timelines with MITRE ATT&CK mappings. Templates are ready for direct adoption or adaptation.
 
@@ -17,10 +17,10 @@ The IR lifecycle defined by NIST 800-61 organizes incident handling into four ph
 | **3. Containment, Eradication & Recovery** | Stopping the spread, removing the threat, and restoring normal operations | Playbook response sections; scenario remediation actions |
 | **4. Post-Incident Activity** | Lessons learned, IOC sharing, documentation, and process improvement | Playbook post-incident sections; scenario conclusions |
 
-## Repository Structure
+## Structure
 
 ```
-05-incident-response/
+incident-response/
 |-- README.md                                  # This file
 |-- playbooks/
 |   |-- malware-infection.md                   # Malware detection and response playbook
@@ -73,13 +73,8 @@ The playbooks and scenarios reference tools commonly deployed in enterprise SOC 
 | Threat Intel | VirusTotal, AbuseIPDB, Shodan, MISP, AlienVault OTX |
 | Ticketing | ServiceNow, Jira, TheHive |
 
-## Intended Audience
+## Audience
 
 - SOC Analysts (Tier 1 through Tier 3)
 - Incident Responders
 - Security Engineers building or refining IR programs
-- Hiring managers and interviewers evaluating IR competency
-
-## Author
-
-Created as part of a cybersecurity portfolio demonstrating hands-on incident response methodology, technical writing, and SOC operational knowledge.
